@@ -7,12 +7,12 @@
 
   /*========== Colors ==========*/
   /*Color mode HSL(hue, saturation, lightness)*/
-  --first-color: hsl(52, 43%, 24%);
+  --first-color: hsl(19, 97%, 86%);
   --first-color-dark: hsl(30, 85%, 65%);
   --first-color-darken: hsl(30, 85%, 65%);
   --second-color: hsl(30, 85%, 65%);
   --second-color-dark: hsl(14, 64%, 28%);
-  --white-color: hsl(51, 55%, 82%);
+  --white-color: hsl(353, 51%, 46%);
   --shadow-img: drop-shadow(0 12px 24px hsla(0, 0%, 0%, .4));
   --shadow-circle: 0 12px 24px hsla(0, 0%, 0%, .4);
   --shadow-button: 0 -4px 8px hsla(0, 0%, 0%, .3);
