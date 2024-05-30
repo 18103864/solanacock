@@ -10,7 +10,7 @@ var current_acc = undefined;
 var current_bg = undefined;
 var current_bottom = undefined;
 
-var selected_body = 1;
+var selected_body = 2;
 var selected_hat = 0;
 var selected_acc = 0;
 var selected_bg = 1;
@@ -123,8 +123,8 @@ function selectParts(type, idx) {
     setSelectedIdx(type, idx);
 }
     
-AddParts(bodyList, 'body',1, 'mememaker-assets/img/icons/icon-0.png', 'mememaker-assets/img/chicken/0.png', true);
-AddParts(bodyList, 'body',2, 'mememaker-assets/img/icons/icon-1.png', 'mememaker-assets/img/chicken/1.png');
+AddParts(bodyList, 'body',1, 'mememaker-assets/img/icons/icon-0.png', 'mememaker-assets/img/chicken/0.png');
+AddParts(bodyList, 'body',2, 'mememaker-assets/img/icons/icon-1.png', 'mememaker-assets/img/chicken/1.png', true);
 AddParts(bodyList, 'body',3, 'mememaker-assets/img/icons/icon-2.png', 'mememaker-assets/img/chicken/2.png');
 AddParts(bodyList, 'body',4, 'mememaker-assets/img/icons/icon-3.png', 'mememaker-assets/img/chicken/3.png');
 AddParts(bodyList, 'body',5, 'mememaker-assets/img/icons/icon-4.png', 'mememaker-assets/img/chicken/4.png');
@@ -161,7 +161,8 @@ AddParts(accList, 'acc',12, 'mememaker-assets/img/icons/icon-top012.png', 'memem
 AddParts(accList, 'acc',13, 'mememaker-assets/img/icons/icon-top013.png', 'mememaker-assets/img/top/top013.png');
 AddParts(accList, 'acc',14, 'mememaker-assets/img/icons/icon-top014.png', 'mememaker-assets/img/top/top014.png');
 
-AddParts(bottomList, 'bottom', 1, 'mememaker-assets/img/icons/icon-bot001.png', 'mememaker-assets/img/bottom/bot001.png', true);
+AddParts(bottomList, 'bottom',0, 'mememaker-assets/img/none.png', undefined, true);
+AddParts(bottomList, 'bottom', 1, 'mememaker-assets/img/icons/icon-bot001.png', 'mememaker-assets/img/bottom/bot001.png');
 AddParts(bottomList, 'bottom', 2, 'mememaker-assets/img/icons/icon-bot002.png', 'mememaker-assets/img/bottom/bot002.png');
 AddParts(bottomList, 'bottom', 3, 'mememaker-assets/img/icons/icon-bot003.png', 'mememaker-assets/img/bottom/bot003.png');
 AddParts(bottomList, 'bottom', 4, 'mememaker-assets/img/icons/icon-bot004.png', 'mememaker-assets/img/bottom/bot004.png');
@@ -219,10 +220,11 @@ function randRange(min, max) {
 
 const resetBtn = document.getElementById('reset-btn');
 resetBtn.onclick = () => {
-    selectParts('body', 1);
+    selectParts('body', 2);
     selectParts('hat', 0);
     selectParts('acc', 0);
     selectParts('bg', 1);
+    selectParts('bottom', 0);
 }
 
 const randomBtn = document.getElementById('random-btn');
