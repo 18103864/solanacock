@@ -1,6 +1,6 @@
 const bodyList = document.getElementById('body-list');
 const hatList = document.getElementById('hat-list');
-const accList = document.getElementById('acc-list');
+const topList = document.getElementById('acc-list');
 const bgList = document.getElementById('bg-list');
 const bottomList = document.getElementById('bottom-list');
 
@@ -150,21 +150,21 @@ AddParts(hatList, 'hat',12, 'mememaker-assets/img/icons/icon-head012.png', 'meme
 AddParts(hatList, 'hat',13, 'mememaker-assets/img/icons/icon-head013.png', 'mememaker-assets/img/head/head013.png');
 AddParts(hatList, 'hat',14, 'mememaker-assets/img/icons/icon-head014.png', 'mememaker-assets/img/head/head014.png');
 
-AddParts(accList, 'acc',0, 'mememaker-assets/img/none.png', undefined, true);
-AddParts(accList, 'acc',1, 'mememaker-assets/img/icons/icon-top001.png', 'mememaker-assets/img/top/top001.png');
-AddParts(accList, 'acc',2, 'mememaker-assets/img/icons/icon-top002.png', 'mememaker-assets/img/top/top002.png');
-AddParts(accList, 'acc',3, 'mememaker-assets/img/icons/icon-top003.png', 'mememaker-assets/img/top/top003.png');
-AddParts(accList, 'acc',4, 'mememaker-assets/img/icons/icon-top004.png', 'mememaker-assets/img/top/top004.png');
-AddParts(accList, 'acc',5, 'mememaker-assets/img/icons/icon-top005.png', 'mememaker-assets/img/top/top005.png');
-// AddParts(accList, 'acc',6, 'mememaker-assets/img/icons/icon-top006.png', 'mememaker-assets/img/top/top006.png');
-AddParts(accList, 'acc',7, 'mememaker-assets/img/icons/icon-top007.png', 'mememaker-assets/img/top/top007.png');
-AddParts(accList, 'acc',8, 'mememaker-assets/img/icons/icon-top008.png', 'mememaker-assets/img/top/top008.png');
-AddParts(accList, 'acc',9, 'mememaker-assets/img/icons/icon-top009.png', 'mememaker-assets/img/top/top009.png');
-AddParts(accList, 'acc',10, 'mememaker-assets/img/icons/icon-top010.png', 'mememaker-assets/img/top/top010.png');
-AddParts(accList, 'acc',11, 'mememaker-assets/img/icons/icon-top011.png', 'mememaker-assets/img/top/top011.png');
-AddParts(accList, 'acc',12, 'mememaker-assets/img/icons/icon-top012.png', 'mememaker-assets/img/top/top012.png');
-AddParts(accList, 'acc',13, 'mememaker-assets/img/icons/icon-top013.png', 'mememaker-assets/img/top/top013.png');
-AddParts(accList, 'acc',14, 'mememaker-assets/img/icons/icon-top014.png', 'mememaker-assets/img/top/top014.png');
+AddParts(topList, 'acc',0, 'mememaker-assets/img/none.png', undefined, true);
+AddParts(topList, 'acc',1, 'mememaker-assets/img/icons/icon-top001.png', 'mememaker-assets/img/top/top001.png');
+AddParts(topList, 'acc',2, 'mememaker-assets/img/icons/icon-top002.png', 'mememaker-assets/img/top/top002.png');
+AddParts(topList, 'acc',3, 'mememaker-assets/img/icons/icon-top003.png', 'mememaker-assets/img/top/top003.png');
+AddParts(topList, 'acc',4, 'mememaker-assets/img/icons/icon-top004.png', 'mememaker-assets/img/top/top004.png');
+AddParts(topList, 'acc',5, 'mememaker-assets/img/icons/icon-top005.png', 'mememaker-assets/img/top/top005.png');
+// AddParts(topList, 'acc',6, 'mememaker-assets/img/icons/icon-top006.png', 'mememaker-assets/img/top/top006.png');
+AddParts(topList, 'acc',7, 'mememaker-assets/img/icons/icon-top007.png', 'mememaker-assets/img/top/top007.png');
+AddParts(topList, 'acc',8, 'mememaker-assets/img/icons/icon-top008.png', 'mememaker-assets/img/top/top008.png');
+AddParts(topList, 'acc',9, 'mememaker-assets/img/icons/icon-top009.png', 'mememaker-assets/img/top/top009.png');
+AddParts(topList, 'acc',10, 'mememaker-assets/img/icons/icon-top010.png', 'mememaker-assets/img/top/top010.png');
+AddParts(topList, 'acc',11, 'mememaker-assets/img/icons/icon-top011.png', 'mememaker-assets/img/top/top011.png');
+AddParts(topList, 'acc',12, 'mememaker-assets/img/icons/icon-top012.png', 'mememaker-assets/img/top/top012.png');
+AddParts(topList, 'acc',13, 'mememaker-assets/img/icons/icon-top013.png', 'mememaker-assets/img/top/top013.png');
+AddParts(topList, 'acc',14, 'mememaker-assets/img/icons/icon-top014.png', 'mememaker-assets/img/top/top014.png');
 
 AddParts(bottomList, 'bottom',0, 'mememaker-assets/img/none.png', undefined, true);
 AddParts(bottomList, 'bottom', 1, 'mememaker-assets/img/icons/icon-bot001.png', 'mememaker-assets/img/bottom/bot001.png');
@@ -244,7 +244,7 @@ function randRange(min, max) {
 
 const resetBtn = document.getElementById('reset-btn');
 resetBtn.onclick = () => {
-    selectParts('body', 2);
+    selectParts('body', 1);
     selectParts('hat', 0);
     selectParts('acc', 0);
     selectParts('bg', 0);
@@ -268,54 +268,143 @@ downloadBtn.onclick = () => {
     link.click();
 }
 
+//body left and right buttons
 const bodyLeftBtn = document.getElementById('body-left');
+const bodyLeftmaxTranslateX = 0; // Adjust the maximum translation as needed
+const bodyLefttranslateStep = -200; // Adjust the step size as needed
+
 bodyLeftBtn.onclick = () => {
-    bodyList.style.transform = 'translateX(0px)';
+    let bodyLeftcurrentTranslateX = parseInt(bodyList.style.transform.replace('translateX(', '').replace('px)', '')) || 0;
+    bodyLeftcurrentTranslateX -= bodyLefttranslateStep;
+    if (bodyLeftcurrentTranslateX > bodyLeftmaxTranslateX) {
+        bodyLeftcurrentTranslateX = bodyLeftmaxTranslateX;
+    }
+    bodyList.style.transform = `translateX(${bodyLeftcurrentTranslateX}px)`;
 }
 
 const bodyRightBtn = document.getElementById('body-right');
+const bodyRightmaxTranslateX = -410; // Adjust the maximum translation as needed
+const bodyRighttranslateStep = 200; // Adjust the step size as needed
+
 bodyRightBtn.onclick = () => {
-    bodyList.style.transform = 'translateX(-390px)';
+    let bodyRightcurrentTranslateX = parseInt(bodyList.style.transform.replace('translateX(', '').replace('px)', '')) || 0;
+    bodyRightcurrentTranslateX -= bodyRighttranslateStep;
+    if (bodyRightcurrentTranslateX < bodyRightmaxTranslateX) {
+        bodyRightcurrentTranslateX = bodyRightmaxTranslateX;
+    }
+    bodyList.style.transform = `translateX(${bodyRightcurrentTranslateX}px)`;
 }
 
+//head left and right buttons
 const hatLeftBtn = document.getElementById('hat-left');
+const hatLeftmaxTranslateX = 0; // Adjust the maximum translation as needed
+const hatLefttranslateStep = -200; // Adjust the step size as needed
+
 hatLeftBtn.onclick = () => {
-    hatList.style.transform = 'translateX(0px)';
+    let hatLeftcurrentTranslateX = parseInt(hatList.style.transform.replace('translateX(', '').replace('px)', '')) || 0;
+    hatLeftcurrentTranslateX -= hatLefttranslateStep;
+    if (hatLeftcurrentTranslateX > hatLeftmaxTranslateX) {
+        hatLeftcurrentTranslateX = hatLeftmaxTranslateX;
+    }
+    hatList.style.transform = `translateX(${hatLeftcurrentTranslateX}px)`;
 }
 
 const hatRightBtn = document.getElementById('hat-right');
+const hatRightmaxTranslateX = -870; // Adjust the maximum translation as needed
+const hatRighttranslateStep = 200; // Adjust the step size as needed
+
 hatRightBtn.onclick = () => {
-    hatList.style.transform = 'translateX(-750px)';
+    let hatRightcurrentTranslateX = parseInt(hatList.style.transform.replace('translateX(', '').replace('px)', '')) || 0;
+    hatRightcurrentTranslateX -= hatRighttranslateStep;
+    if (hatRightcurrentTranslateX < hatRightmaxTranslateX) {
+        hatRightcurrentTranslateX = hatRightmaxTranslateX;
+    }
+    hatList.style.transform = `translateX(${hatRightcurrentTranslateX}px)`;
 }
 
+
+//top left and right buttons
+
 const topLeftBtn = document.getElementById('top-left');
+const topLeftmaxTranslateX = 0; // Adjust the maximum translation as needed
+const topLefttranslateStep = -200; // Adjust the step size as needed
+
 topLeftBtn.onclick = () => {
-    accList.style.transform = 'translateX(0px)';
+    let topLeftcurrentTranslateX = parseInt(topList.style.transform.replace('translateX(', '').replace('px)', '')) || 0;
+    topLeftcurrentTranslateX -= topLefttranslateStep;
+    if (topLeftcurrentTranslateX > topLeftmaxTranslateX) {
+        topLeftcurrentTranslateX = topLeftmaxTranslateX;
+    }
+    topList.style.transform = `translateX(${topLeftcurrentTranslateX}px)`;
 }
 
 const topRightBtn = document.getElementById('top-right');
+const topRightmaxTranslateX = -770; // Adjust the maximum translation as needed
+const topRighttranslateStep = 200; // Adjust the step size as needed
+
 topRightBtn.onclick = () => {
-    accList.style.transform = 'translateX(-750px)';
+    let topRightcurrentTranslateX = parseInt(topList.style.transform.replace('translateX(', '').replace('px)', '')) || 0;
+    topRightcurrentTranslateX -= topRighttranslateStep;
+    if (topRightcurrentTranslateX < topRightmaxTranslateX) {
+        topRightcurrentTranslateX = topRightmaxTranslateX;
+    }
+    topList.style.transform = `translateX(${topRightcurrentTranslateX}px)`;
 }
 
+//bottom left and right buttons
+
 const bottomLeftBtn = document.getElementById('bottom-left');
+const bottomLeftmaxTranslateX = 0; // Adjust the maximum translation as needed
+const bottomLefttranslateStep = -200; // Adjust the step size as needed
+
 bottomLeftBtn.onclick = () => {
-    bottomList.style.transform = 'translateX(0px)';
+    let bottomLeftcurrentTranslateX = parseInt(bottomList.style.transform.replace('translateX(', '').replace('px)', '')) || 0;
+    bottomLeftcurrentTranslateX -= bottomLefttranslateStep;
+    if (bottomLeftcurrentTranslateX > bottomLeftmaxTranslateX) {
+        bottomLeftcurrentTranslateX = bottomLeftmaxTranslateX;
+    }
+    bottomList.style.transform = `translateX(${bottomLeftcurrentTranslateX}px)`;
 }
 
 const bottomRightBtn = document.getElementById('bottom-right');
+const bottomRightmaxTranslateX = -690; // Adjust the maximum translation as needed
+const bottomRighttranslateStep = 200; // Adjust the step size as needed
+
 bottomRightBtn.onclick = () => {
-    bottomList.style.transform = 'translateX(-660px)';
+    let bottomRightcurrentTranslateX = parseInt(bottomList.style.transform.replace('translateX(', '').replace('px)', '')) || 0;
+    bottomRightcurrentTranslateX -= bottomRighttranslateStep;
+    if (bottomRightcurrentTranslateX < bottomRightmaxTranslateX) {
+        bottomRightcurrentTranslateX = bottomRightmaxTranslateX;
+    }
+    bottomList.style.transform = `translateX(${bottomRightcurrentTranslateX}px)`
 }
 
+//bg left and right buttons
+
 const bgLeftBtn = document.getElementById('bg-left');
+const bgLeftmaxTranslateX = 0; // Adjust the maximum translation as needed
+const bgLefttranslateStep = -200; // Adjust the step size as needed
+
 bgLeftBtn.onclick = () => {
-    bgList.style.transform = 'translateX(0px)';
+    let bgLeftcurrentTranslateX = parseInt(bgList.style.transform.replace('translateX(', '').replace('px)', '')) || 0;
+    bgLeftcurrentTranslateX -= bgLefttranslateStep;
+    if (bgLeftcurrentTranslateX > bgLeftmaxTranslateX) {
+        bgLeftcurrentTranslateX = bgLeftmaxTranslateX;
+    }
+    bgList.style.transform = `translateX(${bgLeftcurrentTranslateX}px)`;
 }
 
 const bgRightBtn = document.getElementById('bg-right');
+const bgRightmaxTranslateX = -1300; // Adjust the maximum translation as needed
+const bgRighttranslateStep = 200; // Adjust the step size as needed
+
 bgRightBtn.onclick = () => {
-    bgList.style.transform = 'translateX(-1290px)';
+    let bgRightcurrentTranslateX = parseInt(bgList.style.transform.replace('translateX(', '').replace('px)', '')) || 0;
+    bgRightcurrentTranslateX -= bgRighttranslateStep;
+    if (bgRightcurrentTranslateX < bgRightmaxTranslateX) {
+        bgRightcurrentTranslateX = bgRightmaxTranslateX;
+    }
+    bgList.style.transform = `translateX(${bgRightcurrentTranslateX}px)`;
 }
 
 

@@ -115,6 +115,11 @@ h1 {
     color: var(--second-color);
   }
 
+#bg-list {
+    transition: transform 0.3s ease;
+    overflow-x: visible;
+}
+
 .light-button {
     width: 400px;
     height: 60px;
