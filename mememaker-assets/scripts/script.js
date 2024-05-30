@@ -10,10 +10,10 @@ var current_acc = undefined;
 var current_bg = undefined;
 var current_bottom = undefined;
 
-var selected_body = 2;
+var selected_body = 1;
 var selected_hat = 0;
 var selected_acc = 0;
-var selected_bg = 1;
+var selected_bg = 0;
 var selected_bottom = 1;
 
 function setImage(type, image) {
@@ -122,12 +122,17 @@ function selectParts(type, idx) {
     parts.click();
     setSelectedIdx(type, idx);
 }
-    
-AddParts(bodyList, 'body',1, 'mememaker-assets/img/icons/icon-0.png', 'mememaker-assets/img/chicken/0.png');
-AddParts(bodyList, 'body',2, 'mememaker-assets/img/icons/icon-1.png', 'mememaker-assets/img/chicken/1.png', true);
-AddParts(bodyList, 'body',3, 'mememaker-assets/img/icons/icon-2.png', 'mememaker-assets/img/chicken/2.png');
-AddParts(bodyList, 'body',4, 'mememaker-assets/img/icons/icon-3.png', 'mememaker-assets/img/chicken/3.png');
-AddParts(bodyList, 'body',5, 'mememaker-assets/img/icons/icon-4.png', 'mememaker-assets/img/chicken/4.png');
+
+AddParts(bodyList, 'body',0, 'mememaker-assets/img/icons/icon-0.png', 'mememaker-assets/img/chicken/0.png');
+AddParts(bodyList, 'body',1, 'mememaker-assets/img/icons/icon-1.png', 'mememaker-assets/img/chicken/1.png', true);
+AddParts(bodyList, 'body',2, 'mememaker-assets/img/icons/icon-2.png', 'mememaker-assets/img/chicken/2.png');
+AddParts(bodyList, 'body',3, 'mememaker-assets/img/icons/icon-3.png', 'mememaker-assets/img/chicken/3.png');
+AddParts(bodyList, 'body',4, 'mememaker-assets/img/icons/icon-4.png', 'mememaker-assets/img/chicken/4.png');
+AddParts(bodyList, 'body',5, 'mememaker-assets/img/icons/icon-5.png', 'mememaker-assets/img/chicken/5.png');
+AddParts(bodyList, 'body',6, 'mememaker-assets/img/icons/icon-6.png', 'mememaker-assets/img/chicken/6.png');
+AddParts(bodyList, 'body',7, 'mememaker-assets/img/icons/icon-7.png', 'mememaker-assets/img/chicken/7.png');
+AddParts(bodyList, 'body',8, 'mememaker-assets/img/icons/icon-8.png', 'mememaker-assets/img/chicken/8.png');
+AddParts(bodyList, 'body',9, 'mememaker-assets/img/icons/icon-9.png', 'mememaker-assets/img/chicken/9.png');
 
 AddParts(hatList, 'hat',0, 'mememaker-assets/img/none.png', undefined, true);
 AddParts(hatList, 'hat',1, 'mememaker-assets/img/icons/icon-head001.png', 'mememaker-assets/img/head/head001.png');
@@ -175,11 +180,30 @@ AddParts(bottomList, 'bottom', 10, 'mememaker-assets/img/icons/icon-bot010.png',
 AddParts(bottomList, 'bottom', 11, 'mememaker-assets/img/icons/icon-bot011.png', 'mememaker-assets/img/bottom/bot011.png');
 AddParts(bottomList, 'bottom', 12, 'mememaker-assets/img/icons/icon-bot012.png', 'mememaker-assets/img/bottom/bot012.png');
 
-AddParts(bgList, 'bg',1, 'mememaker-assets/img/icons/icon-bg.png', 'mememaker-assets/img/background/bg.png', true);
-AddParts(bgList, 'bg',2, 'mememaker-assets/img/icons/icon-bg1.png', 'mememaker-assets/img/background/bg1.png');
-AddParts(bgList, 'bg',3, 'mememaker-assets/img/icons/icon-bg2.png', 'mememaker-assets/img/background/bg2.png');
-AddParts(bgList, 'bg',4, 'mememaker-assets/img/icons/icon-bg3.png', 'mememaker-assets/img/background/bg3.png');
+AddParts(bgList, 'bg',0, 'mememaker-assets/img/icons/icon-bg.png', 'mememaker-assets/img/background/bg.png', true);
+AddParts(bgList, 'bg',1, 'mememaker-assets/img/icons/icon-bg1.png', 'mememaker-assets/img/background/bg1.png');
+AddParts(bgList, 'bg',2, 'mememaker-assets/img/icons/icon-bg2.png', 'mememaker-assets/img/background/bg2.png');
+AddParts(bgList, 'bg',3, 'mememaker-assets/img/icons/icon-bg3.png', 'mememaker-assets/img/background/bg3.png');
 AddParts(bgList, 'bg',4, 'mememaker-assets/img/icons/icon-bg4.png', 'mememaker-assets/img/background/bg4.png');
+AddParts(bgList, 'bg',5, 'mememaker-assets/img/icons/icon-bg5.png', 'mememaker-assets/img/background/bg5.png');
+AddParts(bgList, 'bg',6, 'mememaker-assets/img/icons/icon-bg6.png', 'mememaker-assets/img/background/bg6.png');
+AddParts(bgList, 'bg',7, 'mememaker-assets/img/icons/icon-bg7.png', 'mememaker-assets/img/background/bg7.png');
+AddParts(bgList, 'bg',8, 'mememaker-assets/img/icons/icon-bg8.png', 'mememaker-assets/img/background/bg8.png');
+AddParts(bgList, 'bg',9, 'mememaker-assets/img/icons/icon-bg9.png', 'mememaker-assets/img/background/bg9.png');
+AddParts(bgList, 'bg',10, 'mememaker-assets/img/icons/icon-bg10.png', 'mememaker-assets/img/background/bg10.png');
+AddParts(bgList, 'bg',11, 'mememaker-assets/img/icons/icon-bg11.png', 'mememaker-assets/img/background/bg11.png');
+AddParts(bgList, 'bg',12, 'mememaker-assets/img/icons/icon-bg12.png', 'mememaker-assets/img/background/bg12.png');
+AddParts(bgList, 'bg',13, 'mememaker-assets/img/icons/icon-bg13.png', 'mememaker-assets/img/background/bg13.png');
+AddParts(bgList, 'bg',14, 'mememaker-assets/img/icons/icon-bg14.png', 'mememaker-assets/img/background/bg14.png');
+AddParts(bgList, 'bg',15, 'mememaker-assets/img/icons/icon-bg15.png', 'mememaker-assets/img/background/bg15.png');
+AddParts(bgList, 'bg',16, 'mememaker-assets/img/icons/icon-bg16.png', 'mememaker-assets/img/background/bg16.png');
+AddParts(bgList, 'bg',17, 'mememaker-assets/img/icons/icon-bg17.png', 'mememaker-assets/img/background/bg17.png');
+AddParts(bgList, 'bg',18, 'mememaker-assets/img/icons/icon-bg18.png', 'mememaker-assets/img/background/bg18.png');
+AddParts(bgList, 'bg',19, 'mememaker-assets/img/icons/icon-bg19.png', 'mememaker-assets/img/background/bg19.png');
+
+
+
+
 
 
 
@@ -223,16 +247,16 @@ resetBtn.onclick = () => {
     selectParts('body', 2);
     selectParts('hat', 0);
     selectParts('acc', 0);
-    selectParts('bg', 1);
+    selectParts('bg', 0);
     selectParts('bottom', 0);
 }
 
 const randomBtn = document.getElementById('random-btn');
 randomBtn.onclick = () => {
-    selectParts('body', randRange(1,5));
+    selectParts('body', randRange(0,10));
     selectParts('hat', randRange(0,15));
     selectParts('acc', randRange(0,15));
-    selectParts('bg', randRange(1,5));
+    selectParts('bg', randRange(0,20));
     selectParts('bottom', randRange(1,13));
 }
 
@@ -251,7 +275,7 @@ bodyLeftBtn.onclick = () => {
 
 const bodyRightBtn = document.getElementById('body-right');
 bodyRightBtn.onclick = () => {
-    bodyList.style.transform = 'translateX(-130px)';
+    bodyList.style.transform = 'translateX(-390px)';
 }
 
 const hatLeftBtn = document.getElementById('hat-left');
@@ -261,7 +285,7 @@ hatLeftBtn.onclick = () => {
 
 const hatRightBtn = document.getElementById('hat-right');
 hatRightBtn.onclick = () => {
-    hatList.style.transform = 'translateX(-850px)';
+    hatList.style.transform = 'translateX(-750px)';
 }
 
 const topLeftBtn = document.getElementById('top-left');
@@ -281,6 +305,18 @@ bottomLeftBtn.onclick = () => {
 
 const bottomRightBtn = document.getElementById('bottom-right');
 bottomRightBtn.onclick = () => {
-    bottomList.style.transform = 'translateX(-600px)';
+    bottomList.style.transform = 'translateX(-660px)';
 }
+
+const bgLeftBtn = document.getElementById('bg-left');
+bgLeftBtn.onclick = () => {
+    bgList.style.transform = 'translateX(0px)';
+}
+
+const bgRightBtn = document.getElementById('bg-right');
+bgRightBtn.onclick = () => {
+    bgList.style.transform = 'translateX(-1290px)';
+}
+
+
 

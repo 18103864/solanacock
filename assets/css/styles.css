@@ -1,5 +1,5 @@
 /*=============== GOOGLE FONTS ===============*/
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Titan+One&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
 
 /*=============== VARIABLES CSS ===============*/
 :root {
@@ -21,10 +21,11 @@
 
   /*========== Font and typography ==========*/
   /*.5rem = 8px | 1rem = 16px ...*/
-  --body-font: "Poppins", sans-serif;
-  --second-font: "Titan One", sans-serif;
-  --biggest-font-size: 5rem;
-  --h1-font-size: 1.5rem;
+  --body-font: "VT323", monospace;
+  --second-font: "VT323", monospace;
+  --biggest-font-size: 10rem;
+  --nav-font-size: 5rem;
+  --h1-font-size: 2.5rem;
   --h2-font-size: 2rem;
   --h3-font-size: 1rem;
   --normal-font-size: .938rem;
@@ -100,7 +101,7 @@ img {
 }
 
 .section__title {
-  font: var(--font-regular) var(--h1-font-size) var(--second-font);
+  font: var(--font-regular) var(--nav-font-size) var(--second-font);
 
   text-align: center;
   margin-bottom: 1.5rem;
@@ -134,7 +135,7 @@ img {
   color: var(--white-color);
   font-family: var(--second-font);
   /* text-shadow: var(--shadow-text); */
-  font-size: var(--h1-font-size);
+  font-size: var(--nav-font-size);
 }
 
 .nav__close,
@@ -175,7 +176,7 @@ img {
 
 .nav__link {
   color: var(--white-color);
-  font-size: var(--h2-font-size);
+  font-size: var(--h1-font-size);
   font-weight: var(--font-semi-bold);
   transition: color .4s;
 }
@@ -344,6 +345,7 @@ img {
   padding: .75rem 1.5rem;
   border-radius: 4rem;
   box-shadow: inset var(--shadow-button);
+  font-size: var(--h2-font-size);
 }
 
 .button__ghost{
@@ -361,7 +363,7 @@ img {
 
 .favorites__description{
   font: var(--body-font);
-  font-size: var(--h3-font-size);
+  font-size: var(--h1-font-size);
 }
 
 .favorites__data{
@@ -724,7 +726,7 @@ img {
   grid-template-columns: repeat(2, max-content);
   justify-content: center;
   row-gap: 3.5rem;
-  font-size: 1.5rem;
+  font-size: 1.9rem;
 }
 
 .footer__copy{
@@ -795,7 +797,7 @@ img {
   }
 
   .home__title{
-    font-size: 3rem;
+    font-size: var(--biggest-font-size);
   }
 
   .home__buttons{
@@ -907,9 +909,9 @@ img {
     display: none;
   }
 
-  .nav__link{
+  /* .nav__link{
     font-size: var(--h2-font-size);
-  }
+  } */
 
   .nav__menu{
     display: flex;
@@ -939,6 +941,7 @@ img {
 
   .home__description{
     margin-bottom: 2rem;
+    font-size: var(--h2-font-size);
   }
 
   .home__description .twitter-link {
@@ -950,7 +953,7 @@ img {
   .home__description-subtitle{
     /* font-size: 1.2rem; */
     margin-bottom: 2rem;
-    font: var(--h2-font-size) var(--second-font);
+    font: var(--h1-font-size) var(--second-font);
   }
 
   .home__buttons{
