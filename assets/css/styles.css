@@ -708,11 +708,11 @@ img {
 /*=============== SCROLL BAR ===============*/
 ::-webkit-scrollbar{
   width: 0.6rem;
-  background-color: hsl(170, 50%, 30%);
+  background-color: var(--first-color);
 }
 
 ::-webkit-scrollbar-thumb{
-  background-color: hsl(170, 50%, 20%);
+  background-color: var(--white-color);
 }
 
 ::-webkit-scrollbar-thumb:hover{
