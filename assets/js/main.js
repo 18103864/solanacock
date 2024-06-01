@@ -91,3 +91,54 @@ sr.reveal(`.home__tomato-1, .home__tomato-2`, {delay: 1400, interval: 100})
 sr.reveal(`.care__img, .contact__img`, {origin: 'left'})
 sr.reveal(`.care__list, .contact__data`, {origin: 'right'})
 sr.reveal(`.banner__item, .products__card`, {interval: 100})
+
+// BACKGROUND MUSIC
+
+document.body.addEventListener('click', function() {
+    var audio = document.getElementById('audio');
+    // if (audio.paused) {
+    //     audio.play();
+    // } else {
+    //     audio.pause();
+    // }
+
+    audio.play();
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+    const audio = document.getElementById('audio');
+    const audioIcon = document.querySelector('.section__audio i');
+
+    // Function to toggle play/pause
+    function togglePlayPause() {
+        if (audio.paused) {
+            audio.play();
+        } else {
+            audio.pause();
+        }
+    }
+
+    // Function to update icon
+    function updateIcon() {
+        if (audio.paused) {
+            // When audio is paused, change icon to mute
+            audioIcon.classList.remove('ri-volume-up-fill');
+            audioIcon.classList.add('ri-volume-mute-fill');
+        } else {
+            // When audio is playing, change icon to volume on
+            audioIcon.classList.remove('ri-volume-mute-fill');
+            audioIcon.classList.add('ri-volume-up-fill');
+        }
+    }
+
+    // Add event listener to toggle play/pause on clicking the audio icon
+    audioIcon.addEventListener('click', function (event) {
+        event.stopPropagation(); // Prevents the click event from bubbling up to the body
+        togglePlayPause(); // Toggle play/pause
+        updateIcon(); // Update icon
+    });
+
+    // Add event listener for when the audio is playing or paused
+    audio.addEventListener('play', updateIcon);
+    audio.addEventListener('pause', updateIcon);
+});

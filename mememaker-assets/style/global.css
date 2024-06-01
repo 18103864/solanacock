@@ -21,9 +21,9 @@ body {
 .navbar {
     display:flex;
     flex-direction: row;
-    height: 100px;
+    height: 40%;
     font-size:40px;
-    padding:20px;
+    padding: 20px 20px 0px 20px;
 }
 
 .navbar .logo-text {

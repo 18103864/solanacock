@@ -27,7 +27,14 @@
       <!--==================== HEADER ====================-->
       <header class="header" id="header">
          <nav class="nav container">
-            <a href="index.html" class="nav__logo">COCK</a>
+            <div>
+               <a href="index.html" class="nav__logo">COCK</a>
+               <span class="section__audio">
+                  <i class="ri-volume-mute-fill"></i>
+                  <audio class="audio" id="audio" src="/assets/chickensong.mp3" autoplay>
+                  </audio>
+               </span>
+            </div>
 
             <div class="nav__menu" id="nav-menu">
                <ul class="nav__list">
@@ -40,7 +47,7 @@
                   </li>
 
                   <li>
-                     <a href="meme-maker.html" class="nav__link">Meme Maker</a>
+                     <a href="meme-maker.html" target="_blank" class="nav__link">Meme Maker</a>
                   </li>
 
                   <!-- <li>
@@ -112,14 +119,6 @@
                      <a href="#" class="button">Buy Now</a>
                      <a href="meme-maker.html" class="button button__ghost">Make Your Own Meme!</a> 
                   </div>
-                  <audio class="audio" src="/assets/chickensong.mp3" controls autoplay>
-                     <embed 
-                        src="/assets/chickensong.mp3"
-                        width="300"
-                        height="90"
-                        loop="true"
-                        autostart="true">
-                  </audio>
                </div>
 
                <div class="home__images">
