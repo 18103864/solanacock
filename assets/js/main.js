@@ -94,20 +94,23 @@ sr.reveal(`.banner__item, .products__card`, {interval: 100})
 
 // BACKGROUND MUSIC
 
-document.body.addEventListener('click', function() {
-    var audio = document.getElementById('audio');
-    // if (audio.paused) {
-    //     audio.play();
-    // } else {
-    //     audio.pause();
-    // }
+// document.body.addEventListener('click', function() {
+//     var audio = document.getElementById('audio');
+//     // if (audio.paused) {
+//     //     audio.play();
+//     // } else {
+//     //     audio.pause();
+//     // }
 
-    audio.play();
-});
+//     audio.play();
+// });
+
 
 document.addEventListener('DOMContentLoaded', function () {
     const audio = document.getElementById('audio');
     const audioIcon = document.querySelector('.section__audio i');
+    const audioText = document.querySelector('.audio-text');
+    const audioSection = document.querySelector('.section__audio');
 
     // Function to toggle play/pause
     function togglePlayPause() {
@@ -118,27 +121,39 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
+    // document.querySelector('.section__audio').addEventListener('click', function () {
+    //     if (audio.paused) {
+    //         audio.play();
+    //         audioText.textContent = 'Pause Cock Music';
+    //     } else {
+    //         audio.pause();
+    //         audioText.textContent = 'Play Cock Music!';
+    //     }
+    // });
+
     // Function to update icon
-    function updateIcon() {
+    function updateIconAndText() {
         if (audio.paused) {
             // When audio is paused, change icon to mute
             audioIcon.classList.remove('ri-volume-up-fill');
             audioIcon.classList.add('ri-volume-mute-fill');
+            audioText.textContent = "Play Cock Music!";
         } else {
             // When audio is playing, change icon to volume on
             audioIcon.classList.remove('ri-volume-mute-fill');
             audioIcon.classList.add('ri-volume-up-fill');
+            audioText.textContent = "Pause Cock Music!";
         }
     }
 
     // Add event listener to toggle play/pause on clicking the audio icon
-    audioIcon.addEventListener('click', function (event) {
+    audioSection.addEventListener('click', function (event) {
         event.stopPropagation(); // Prevents the click event from bubbling up to the body
         togglePlayPause(); // Toggle play/pause
-        updateIcon(); // Update icon
+        updateIconAndText(); // Update icon
     });
 
     // Add event listener for when the audio is playing or paused
-    audio.addEventListener('play', updateIcon);
-    audio.addEventListener('pause', updateIcon);
+    audio.addEventListener('play', updateIconAndText);
+    audio.addEventListener('pause', updateIconAndText);
 });
