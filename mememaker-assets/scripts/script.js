@@ -152,6 +152,8 @@ AddParts(hatList, 'hat',14, 'mememaker-assets/img/icons/icon-head014.png', 'meme
 AddParts(hatList, 'hat',15, 'mememaker-assets/img/icons/icon-head015.png', 'mememaker-assets/img/head/head015.png');
 AddParts(hatList, 'hat',16, 'mememaker-assets/img/icons/icon-head016.png', 'mememaker-assets/img/head/head016.png');
 AddParts(hatList, 'hat',17, 'mememaker-assets/img/icons/icon-head017.png', 'mememaker-assets/img/head/head017.png');
+AddParts(hatList, 'hat',18, 'mememaker-assets/img/icons/icon-head018.png', 'mememaker-assets/img/head/head018.png');
+AddParts(hatList, 'hat',19, 'mememaker-assets/img/icons/icon-head019.png', 'mememaker-assets/img/head/head019.png');
 
 AddParts(topList, 'acc',0, 'mememaker-assets/img/none.png', undefined, true);
 AddParts(topList, 'acc',1, 'mememaker-assets/img/icons/icon-top001.png', 'mememaker-assets/img/top/top001.png');
@@ -261,7 +263,7 @@ resetBtn.onclick = () => {
 const randomBtn = document.getElementById('random-btn');
 randomBtn.onclick = () => {
     selectParts('body', randRange(0,10));
-    selectParts('hat', randRange(0,15));
+    selectParts('hat', randRange(0,20));
     selectParts('acc', randRange(0,15));
     selectParts('bg', randRange(0,20));
     selectParts('bottom', randRange(1,13));
@@ -317,7 +319,7 @@ hatLeftBtn.onclick = () => {
 }
 
 const hatRightBtn = document.getElementById('hat-right');
-const hatRightmaxTranslateX = -1110; // Adjust the maximum translation as needed
+const hatRightmaxTranslateX = -1290; // Adjust the maximum translation as needed
 const hatRighttranslateStep = 200; // Adjust the step size as needed
 
 hatRightBtn.onclick = () => {
