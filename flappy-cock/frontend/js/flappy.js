@@ -56,7 +56,7 @@ const scoreData = (() => {
 })();
 
 // Generate the height for obstacles
-const gapHeight = 175;
+const gapHeight = 185;
 let obstacleX = [650, 1000]; // Initial positions of each obstacle
 
 let obstacleTopHeight = [
