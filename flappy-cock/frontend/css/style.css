@@ -11,8 +11,12 @@
     padding: 0;
 }
 
+body {
+    background-color:  hsl(19, 97%, 86%);
+}
+
 header {
-    background-color: #E3E3E3FF;
+    background-color: hsl(353, 51%, 46%);
     padding: 16px;
     margin-bottom: 16px;
 }
@@ -24,7 +28,7 @@ nav ul {
 
 nav ul li a {
     text-decoration: none;
-    color: #000000FF;
+    color:  hsl(19, 97%, 86%);
     text-align: center;
     background-image: linear-gradient(0.25turn, red, orange, yellow);
     background-size: 0% 0.125em;

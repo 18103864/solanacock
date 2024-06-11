@@ -56,7 +56,7 @@ const scoreData = (() => {
 })();
 
 // Generate the height for obstacles
-const gapHeight = 150;
+const gapHeight = 175;
 let obstacleX = [650, 1000]; // Initial positions of each obstacle
 
 let obstacleTopHeight = [
@@ -176,10 +176,14 @@ function resetGround() {
 //color stuff
 function getBirdColor() {
     if (birds.length == 0) {
-        bird.style.backgroundImage = `url(./frontend/images/Birds/Yellow.png)`;
+        bird.style.backgroundImage = `url(./frontend/images/cock.png)`;
+        bird.style.width = "62px"; // Adjust the width as needed
+        bird.style.height = "52px"; // Adjust the height as needed
         return;
     } else if (birds.length == 1) {
-        bird.style.backgroundImage = `url(./frontend/images/Birds/${birds[0]}.png)`;
+        bird.style.backgroundImage = `url(./frontend/images/cock.png)`;
+        bird.style.width = "62px"; // Adjust the width as needed
+        bird.style.height = "52px"; // Adjust the height as needed
         return;
     }
 
@@ -410,8 +414,8 @@ function update() {
         coins[i].style.top = coinY[i] + 'px';
 
         if (birdY > 480|| 
-          (obstacleX[i] < birdX + 20 && obstacleX[i] + 50 > birdX && 
-          (birdY < obstacleTopHeight[i] || birdY + 20 > obstacleTopHeight[i] + gapHeight))) {
+          (obstacleX[i] < birdX + 40 && obstacleX[i] + 50 > birdX && 
+          (birdY < obstacleTopHeight[i] || birdY + 40 > obstacleTopHeight[i] + gapHeight))) {
             gameOverTag.innerHTML = "Game Over.<br>Score: " + scoreData.getScore() + "<br> Best: " + getCookieData("maxScore");
             gameOver();
         }

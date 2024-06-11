@@ -8,7 +8,7 @@
     border-bottom: 0px solid black;
     margin: 0 auto;
     overflow: hidden;
-    background-image: url(../images/background.png);
+    background-image: url(../images/spacebg.png);
 }
 
 #scoreContainer {
@@ -237,4 +237,5 @@ input:checked + .slider:before {
 
 #toggleContainer p {
     padding-bottom: 6px;
+    color: hsl(353, 51%, 46%);
 }
