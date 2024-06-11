@@ -149,6 +149,9 @@ AddParts(hatList, 'hat',11, 'mememaker-assets/img/icons/icon-head011.png', 'meme
 AddParts(hatList, 'hat',12, 'mememaker-assets/img/icons/icon-head012.png', 'mememaker-assets/img/head/head012.png');
 AddParts(hatList, 'hat',13, 'mememaker-assets/img/icons/icon-head013.png', 'mememaker-assets/img/head/head013.png');
 AddParts(hatList, 'hat',14, 'mememaker-assets/img/icons/icon-head014.png', 'mememaker-assets/img/head/head014.png');
+AddParts(hatList, 'hat',15, 'mememaker-assets/img/icons/icon-head015.png', 'mememaker-assets/img/head/head015.png');
+AddParts(hatList, 'hat',16, 'mememaker-assets/img/icons/icon-head016.png', 'mememaker-assets/img/head/head016.png');
+AddParts(hatList, 'hat',17, 'mememaker-assets/img/icons/icon-head017.png', 'mememaker-assets/img/head/head017.png');
 
 AddParts(topList, 'acc',0, 'mememaker-assets/img/none.png', undefined, true);
 AddParts(topList, 'acc',1, 'mememaker-assets/img/icons/icon-top001.png', 'mememaker-assets/img/top/top001.png');
@@ -165,6 +168,8 @@ AddParts(topList, 'acc',11, 'mememaker-assets/img/icons/icon-top011.png', 'memem
 AddParts(topList, 'acc',12, 'mememaker-assets/img/icons/icon-top012.png', 'mememaker-assets/img/top/top012.png');
 AddParts(topList, 'acc',13, 'mememaker-assets/img/icons/icon-top013.png', 'mememaker-assets/img/top/top013.png');
 AddParts(topList, 'acc',14, 'mememaker-assets/img/icons/icon-top014.png', 'mememaker-assets/img/top/top014.png');
+AddParts(topList, 'acc',16, 'mememaker-assets/img/icons/icon-top016.png', 'mememaker-assets/img/top/top016.png');
+AddParts(topList, 'acc',17, 'mememaker-assets/img/icons/icon-top017.png', 'mememaker-assets/img/top/top017.png');
 
 AddParts(bottomList, 'bottom',0, 'mememaker-assets/img/none.png', undefined, true);
 AddParts(bottomList, 'bottom', 1, 'mememaker-assets/img/icons/icon-bot001.png', 'mememaker-assets/img/bottom/bot001.png');
@@ -179,6 +184,8 @@ AddParts(bottomList, 'bottom', 9, 'mememaker-assets/img/icons/icon-bot009.png', 
 AddParts(bottomList, 'bottom', 10, 'mememaker-assets/img/icons/icon-bot010.png', 'mememaker-assets/img/bottom/bot010.png');
 AddParts(bottomList, 'bottom', 11, 'mememaker-assets/img/icons/icon-bot011.png', 'mememaker-assets/img/bottom/bot011.png');
 AddParts(bottomList, 'bottom', 12, 'mememaker-assets/img/icons/icon-bot012.png', 'mememaker-assets/img/bottom/bot012.png');
+AddParts(bottomList, 'bottom', 13, 'mememaker-assets/img/icons/icon-bot013.png', 'mememaker-assets/img/bottom/bot013.png');
+AddParts(bottomList, 'bottom', 14, 'mememaker-assets/img/icons/icon-bot014.png', 'mememaker-assets/img/bottom/bot014.png');
 
 AddParts(bgList, 'bg',0, 'mememaker-assets/img/icons/icon-bg.png', 'mememaker-assets/img/background/bg.png', true);
 AddParts(bgList, 'bg',1, 'mememaker-assets/img/icons/icon-bg1.png', 'mememaker-assets/img/background/bg1.png');
@@ -310,7 +317,7 @@ hatLeftBtn.onclick = () => {
 }
 
 const hatRightBtn = document.getElementById('hat-right');
-const hatRightmaxTranslateX = -870; // Adjust the maximum translation as needed
+const hatRightmaxTranslateX = -1110; // Adjust the maximum translation as needed
 const hatRighttranslateStep = 200; // Adjust the step size as needed
 
 hatRightBtn.onclick = () => {
@@ -339,7 +346,7 @@ topLeftBtn.onclick = () => {
 }
 
 const topRightBtn = document.getElementById('top-right');
-const topRightmaxTranslateX = -770; // Adjust the maximum translation as needed
+const topRightmaxTranslateX = -930; // Adjust the maximum translation as needed
 const topRighttranslateStep = 200; // Adjust the step size as needed
 
 topRightBtn.onclick = () => {
@@ -367,7 +374,7 @@ bottomLeftBtn.onclick = () => {
 }
 
 const bottomRightBtn = document.getElementById('bottom-right');
-const bottomRightmaxTranslateX = -690; // Adjust the maximum translation as needed
+const bottomRightmaxTranslateX = -840; // Adjust the maximum translation as needed
 const bottomRighttranslateStep = 200; // Adjust the step size as needed
 
 bottomRightBtn.onclick = () => {
